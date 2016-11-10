@@ -1,0 +1,61 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.content-ios {
+  background: $purple-gradient;
+}
+
+.gold-button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -47.5px;
+  background: $gold-gradient;
+  height: 95px;
+  width: 95px;
+  border-radius: 50%;
+  box-shadow: 0 3px 5px rgba(black, 0.15), inset 0 -2px rgba(black, 0.1), inset 0 2px 1px rgba(white, 0.75);
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  color: map-get($colors, primary);
+  &:after {
+    display: block;
+    position: absolute;
+    opacity: 0.65;
+    content: '';
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 3px solid map-get($colors, primary);
+  }
+  &.star:before {
+    content: '';
+    background-image: url('/assets/button-star.png');
+    background-size: 117px 69px;
+    background-position: 30px 29px;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    position: absolute;
+  }
+}

@@ -1,0 +1,60 @@
+@import './taskBadge/taskBadge';
+
+page-tasks {
+  .current-task {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 200px;
+    left: 10%;
+  }
+  .scroll-content {
+    height: calc(100% - 45px);
+  }
+  .current-task-image {
+    height: 171px;
+    width: 171px;
+    margin: 0 auto;
+    border: 5px solid #6D33A8;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .current-task-name {
+    font-size: 30px;
+    margin: -38px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 54px;
+    background: #CB97FF;
+    border-radius: 27px;
+    font-weight: 800;
+    text-shadow: 0 4px 10px rgba(black, 0.11);
+    position: relative;
+    z-index: 1;
+    span {
+      margin-bottom: -3px;
+    }
+    &:before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 27px;
+      background: #CB97FF;
+    }
+    &:after {
+      content: "";
+      z-index: -2;
+      position: absolute;
+      height: 50%;
+      width: 80%;
+      left: 10%;
+      top: 50%;
+      box-shadow: 0 0 19px rgba(black, 0.3);
+    }
+  }
+}
